@@ -1,7 +1,7 @@
 package com.example.controller;
 
 import com.example.model.MailBox;
-import com.example.service.impl.IMailBoxService;
+import com.example.service.IMailBoxService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,13 +17,13 @@ import java.util.Arrays;
 public class MailBoxController {
 
     @Autowired
-    IMailBoxService iMailBoxService;
+    private IMailBoxService iMailBoxService;
 
     @GetMapping("")
     public String showForm(Model model){
         model.addAttribute("mailBox",iMailBoxService.mailBox());
-        model.addAttribute("languageList", Arrays.asList("English","Vietnamese","Japanese","Chinese"));
-        model.addAttribute("pageSizeList",Arrays.asList("5","10","15","25","50","100"));
+        model.addAttribute("languageList",iMailBoxService.listLanguages() );
+        model.addAttribute("pageSizeList",iMailBoxService.listPageSize());
         return "/mail";
     }
 
