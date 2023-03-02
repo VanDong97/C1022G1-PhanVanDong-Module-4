@@ -2,19 +2,17 @@ package com.example.controller;
 
 import com.example.model.Product;
 import com.example.service.IProductService;
-import com.example.service.impl.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 @RequestMapping("/product")
 public class ProductController {
 
     @Autowired
-    IProductService iProductService ;
+    private IProductService iProductService ;
 
     @GetMapping("")
     public String showProduct(@RequestParam (required = false) String productName, Model model){

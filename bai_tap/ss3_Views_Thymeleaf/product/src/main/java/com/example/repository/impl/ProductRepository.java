@@ -15,14 +15,23 @@ public class ProductRepository implements IProductRepository {
         productList = new ArrayList<Product>(){{
             add(new Product(1,"Audi 2",10000,"New","Join"));
             add(new Product(2,"Audi 3",20000,"New","Join"));
-            add(new Product(3,"Audi 4",30000,"New","Join"));
+            add(new Product(3,"Sudi 4",30000,"New","Join"));
             add(new Product(4,"Audi 5",40000,"New","Join"));
         }};
     }
 
     @Override
     public List<Product> listAll(String productName) {
-        return productList;
+        if (productName == null){
+            return productList;
+        }
+        List<Product> products = new ArrayList<>();
+        for (Product p: productList) {
+            if (p.getProductName().contains(productName)){
+                products.add(p);
+            }
+        }
+        return products;
     }
 
     @Override
