@@ -31,9 +31,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="blog, iterStat : ${blogs}">
+    <tr th:each="blog,iterStat : ${blogList.content}">
         <td th:text="${iterStat.count}"></td>
-        <td><a th:href="@{/blog/detail?id=__*{blog.id}__}" th:text="${blog.title}"></a></td>
+        <td><a th:href="@{/blog/detail?id=__${blog.id}__}" th:text="${blog.title}"></a></td>
         <td th:text="${blog.content}"></td>
         <td th:text="${blog.category?.titleCa}"></td>
         <td><a th:href="@{/blog/edit?id=__${blog.id}__}" class="btn btn-primary">Edit</a></td>
@@ -46,6 +46,22 @@
     </tr>
     </tbody>
 </table>
+
+<div style="display: flex">
+    <a class="page-item" th:if="${blogList.hasPrevious()}"
+    th:href="@{/blogs(page=${blogList.number - 1},title=${freeText})}">
+        Trang Trước
+    </a>
+    <a class="page-item number btn btn-dark" th:classappend="${pageNumber == blogList.number + 1} ? 'active' : ''"
+       th:each="pageNumber : ${pageNumberList}"
+       th:href="@{/blog(page = ${pageNumber - 1},name = ${name})}"
+       th:text="${pageNumber}">
+    </a>
+    <a class="page-item" th:if="${blogList.hasNext()}"
+       th:href="@{/blogs(page=${blogList.number + 1},title=${freeText})}">
+        Trang Sau
+    </a>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
