@@ -9,4 +9,10 @@ public interface IBlogService {
     List<Blog> listAll(String title);
 
     void save (Blog blog);
+
+    Blog findById(int id);
+
+    void deleteBog(Integer id);
+
+    void updateBog(Blog blog);
 }

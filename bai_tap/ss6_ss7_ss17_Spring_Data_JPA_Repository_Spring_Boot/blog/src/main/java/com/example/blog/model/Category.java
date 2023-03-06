@@ -4,21 +4,21 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table (name = "cataloging")
-public class Catalogi {
+@Table (name = "category")
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "catalogi_id")
+    @Column(name = "category_id")
     private Integer id;
 
     @Column(name = "titleCa",nullable = false)
     private String titleCa;
 
-    @OneToMany(mappedBy = "catalogi")
+    @OneToMany(mappedBy = "category")
     private Set<Blog> blogs;
 
-    public Catalogi() {
+    public Category() {
     }
 
     public Integer getId() {

@@ -16,8 +16,8 @@ public class Blog {
     private String content;
 
     @ManyToOne
-    @JoinColumn(name = "catalogi_catalogi_id",referencedColumnName = "catalogi_id")
-    private Catalogi catalogi;
+    @JoinColumn(name = "category_category_id",referencedColumnName = "category_id")
+    private Category category;
 
     public Blog() {
     }
@@ -46,11 +46,11 @@ public class Blog {
         this.content = content;
     }
 
-    public Catalogi getCatalogi() {
-        return catalogi;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCatalogi(Catalogi catalogi) {
-        this.catalogi = catalogi;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

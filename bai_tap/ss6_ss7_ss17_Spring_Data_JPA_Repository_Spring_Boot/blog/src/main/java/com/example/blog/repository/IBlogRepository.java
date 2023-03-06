@@ -8,6 +8,4 @@ import java.util.List;
 public interface IBlogRepository extends JpaRepository<Blog, Integer> {
 
     List<Blog> findByTitleContaining(String title);
-
-
 }

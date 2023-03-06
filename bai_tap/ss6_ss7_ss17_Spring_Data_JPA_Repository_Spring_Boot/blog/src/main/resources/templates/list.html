@@ -15,14 +15,16 @@
     <input type="text" name="productName" placeholder="Search....">
     <input type="submit" value="Search">
 </form>
-<a href="/blog/create" class="btn btn-secondary">Create Blog</a>
+<a href="/blog/create" class="btn btn-secondary">Thêm mới Blog</a>
+<a href="/category/create" class="btn btn-secondary mb-3 mt-3">Thêm mới thể loại</a>
+<a href="/category" class="btn btn-secondary mb-3 mt-3">Danh sách thể loại </a>
 <table class="table">
     <thead>
     <tr>
         <th>STT</th>
         <th>Title</th>
         <th>Content</th>
-        <th>Cataloging</th>
+        <th>Category</th>
         <th>Edit</th>
         <th>Delete</th>
         <th></th>
@@ -31,9 +33,9 @@
     <tbody>
     <tr th:each="blog, iterStat : ${blogs}">
         <td th:text="${iterStat.count}"></td>
-        <td><a th:href="@{/blog/detail?id=__${blog.id}__}" th:text="*{blog.title}"></a></td>
+        <td><a th:href="@{/blog/detail?id=__*{blog.id}__}" th:text="${blog.title}"></a></td>
         <td th:text="${blog.content}"></td>
-        <td th:text="${blog.catalogi.titleCa}"></td>
+        <td th:text="${blog.category?.titleCa}"></td>
         <td><a th:href="@{/blog/edit?id=__${blog.id}__}" class="btn btn-primary">Edit</a></td>
         <td>
             <button th:attr="onclick=|getBlogInfo('${blog.id}', '${blog.title}')|" type="button"
