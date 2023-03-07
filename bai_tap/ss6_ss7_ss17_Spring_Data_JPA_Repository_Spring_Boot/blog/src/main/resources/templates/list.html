@@ -9,15 +9,19 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .active{
+            color: black !important;
+            background: azure !important;
+        }
+    </style>
 </head>
 <body>
 <form action="/blog" method="get">
-    <input type="text" name="productName" placeholder="Search....">
+    <input type="text" name="title" placeholder="Search....">
     <input type="submit" value="Search">
 </form>
 <a href="/blog/create" class="btn btn-secondary">Thêm mới Blog</a>
-<a href="/category/create" class="btn btn-secondary mb-3 mt-3">Thêm mới thể loại</a>
-<a href="/category" class="btn btn-secondary mb-3 mt-3">Danh sách thể loại </a>
 <table class="table">
     <thead>
     <tr>
@@ -31,7 +35,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="blog,iterStat : ${blogList.content}">
+    <tr th:each="blog,iterStat : ${blogList}">
         <td th:text="${iterStat.count}"></td>
         <td><a th:href="@{/blog/detail?id=__${blog.id}__}" th:text="${blog.title}"></a></td>
         <td th:text="${blog.content}"></td>
@@ -47,18 +51,18 @@
     </tbody>
 </table>
 
-<div style="display: flex">
+<div class="text-center">
     <a class="page-item" th:if="${blogList.hasPrevious()}"
-    th:href="@{/blogs(page=${blogList.number - 1},title=${freeText})}">
+    th:href="@{/blog(page=${blogList.number - 1},title=${freeText})}">
         Trang Trước
     </a>
-    <a class="page-item number btn btn-dark" th:classappend="${pageNumber == blogList.number + 1} ? 'active' : ''"
-       th:each="pageNumber : ${pageNumberList}"
-       th:href="@{/blog(page = ${pageNumber - 1},name = ${name})}"
-       th:text="${pageNumber}">
+    <a class="page-item number btn btn-dark" th:classappend="${pageNumber == blogList.number} ? 'active' : ''"
+       th:each="pageNumber : ${integers}"
+       th:href="@{/blog(page = ${pageNumber},name = ${name})}"
+       th:text="${pageNumber + 1}">
     </a>
     <a class="page-item" th:if="${blogList.hasNext()}"
-       th:href="@{/blogs(page=${blogList.number + 1},title=${freeText})}">
+       th:href="@{/blog(page=${blogList.number + 1},title=${freeText})}">
         Trang Sau
     </a>
 </div>

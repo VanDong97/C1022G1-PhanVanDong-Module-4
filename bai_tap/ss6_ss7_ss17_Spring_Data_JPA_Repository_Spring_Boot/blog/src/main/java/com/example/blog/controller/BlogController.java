@@ -24,7 +24,7 @@ public class BlogController {
 
 
     @GetMapping("")
-    public String showBlogList(@RequestParam(required = false,defaultValue = "")String title, Model model,
+    public String showBlogList(@RequestParam(required = false)String title, Model model,
                           @PageableDefault (size = 2)Pageable pageable){
         if (title == null){
             title = "";
