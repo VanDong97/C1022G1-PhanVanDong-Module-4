@@ -4,6 +4,7 @@ import java.util.Set;
 
 public class CategoryDTO {
     private Integer id;
+
     private String name;
 
     private Set<BlogDTO> blogDTOSet;

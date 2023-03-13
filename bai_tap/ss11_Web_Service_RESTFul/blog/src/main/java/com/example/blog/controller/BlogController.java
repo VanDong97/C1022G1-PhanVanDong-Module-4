@@ -8,20 +8,18 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 @RequestMapping("/blog")
+@CrossOrigin("*")
 public class BlogController {
 
     @Autowired
     private IBlogService blogService;
-    @ResponseStatus(HttpStatus.OK)
+//    @ResponseStatus(HttpStatus.OK)
     @GetMapping("")
-    public Page<BlogDTO> getBlogs(@PageableDefault(size = 5) Pageable pageable) {
+    public Page<BlogDTO> getBlogs(@PageableDefault(size = 2) Pageable pageable) {
         return blogService.findAll(pageable);
     }
 

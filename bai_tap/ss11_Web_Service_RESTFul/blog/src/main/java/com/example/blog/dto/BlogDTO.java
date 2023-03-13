@@ -4,7 +4,6 @@ public class BlogDTO {
     private Integer id;
     private String authorName;
     private String title;
-
     private CategoryDTO categoryDTO;
 
     public BlogDTO() {
