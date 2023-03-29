@@ -5,11 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="502f3426-6049-4d5b-9a07-48479e6d5fab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/blog/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/blog/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/blog/src/main/java/com/example/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/blog/src/main/java/com/example/blog/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/blog/src/main/java/com/example/blog/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/blog/src/main/java/com/example/blog/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss12_jQuery_AJAX/blog/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/dto/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/dto/CategoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/controller/MovieController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/controller/MovieTypeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/controller/service/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/controller/service/ServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/dto/MovieDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/dto/MovieTypeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/dto/service/ServiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/dto/service/ServiceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/model/Movie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/model/MovieType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/repository/IMovieRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/repository/IMovieTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/IMovieService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/IMovieTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/impl/MovieService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/impl/MovieTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/service/IServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/service/IServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/service/impl/ServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/service/impl/ServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-FE" beforeDir="false" afterPath="$PROJECT_DIR$/../../../thuc_hanh/csd/Group3-Repository-FE" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +199,8 @@
       <workItem from="1677748174740" duration="731000" />
       <workItem from="1677763734165" duration="646000" />
       <workItem from="1678067158455" duration="67000" />
+      <workItem from="1679835446132" duration="23000" />
+      <workItem from="1679836482494" duration="84000" />
     </task>
     <servers />
   </component>

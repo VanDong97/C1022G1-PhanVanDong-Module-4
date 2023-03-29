@@ -26,14 +26,14 @@ public class ServiceService implements IServiceService {
         List<ServiceDTO> serviceDTOList = new ArrayList<>();
         Page<Service> servicePage = iServiceRepository.findByNameContainingAndIsDeleteFalse(name, pageable);
         ServiceDTO serviceDTO;
-        for (Service service : servicePage) {
+        for (Service service : servicePage.getContent()) {
             serviceDTO = new ServiceDTO();
             serviceDTO.setServiceTypeDTO(new ServiceTypeDTO());
             BeanUtils.copyProperties(service.getServiceType(), serviceDTO.getServiceTypeDTO());
             BeanUtils.copyProperties(service, serviceDTO);
             serviceDTOList.add(serviceDTO);
         }
-        return new PageImpl<>(serviceDTOList);
+        return new PageImpl<>(serviceDTOList, servicePage.getPageable(), servicePage.getTotalElements());
     }
 
     @Override
@@ -56,6 +56,11 @@ public class ServiceService implements IServiceService {
         Service service = iServiceRepository.findById(id);
         service.setDelete(true);
         service.setServiceType(new ServiceType(service.getServiceType().getId()));
+        iServiceRepository.save(service);
+    }
+
+    @Override
+    public void edit(Service service) {
         iServiceRepository.save(service);
     }
 }

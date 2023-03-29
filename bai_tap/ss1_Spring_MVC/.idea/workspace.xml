@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f213862b-1232-4d4b-8cc8-3037b4c11d31" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ss12_jQuery_AJAX/blog/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ss1_Spring_MVC.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/.idea/ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss6_ss7_ss17_Spring_Data_JPA_Repository_Spring_Boot/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/ss1_Spring_MVC/player_management/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/ss1_Spring_MVC/player_management/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/ss1_Spring_MVC/player_management/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bai_tap_them/ss1_Spring_MVC/player_management/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/.idea/thi_module4.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/controller/BaiHatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/controller/TheLoaiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/dto/BaiHatDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/dto/TheLoaiDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/model/BaiHat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/model/TheLoai.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/repository/IBaiHatRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/repository/ITheLoaiRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/service/IBaiHatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/service/ITheLoaiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/service/impl/BaiHatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/BE/src/main/java/com/example/be/service/impl/TheLoaiService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/.idea/FE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/baiHatList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/baiHatList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thi_module4/FE/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/.idea/CaseStudy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/dto/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/dto/CategoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/service/impl/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss11_Web_Service_RESTFul/blog/src/main/java/com/example/blog/service/impl/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss3_Views_Thymeleaf/product/.gradle/7.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss3_Views_Thymeleaf/product/.gradle/7.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss3_Views_Thymeleaf/product/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss3_Views_Thymeleaf/product/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss4_Data_Binding_Form/mailbox/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss4_Data_Binding_Form/mailbox/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_ORM/products/.idea/modules/products.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_ORM/products/.idea/modules/products.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/controller/MovieController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/controller/MovieTypeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/controller/service/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/controller/service/ServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/dto/MovieDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/dto/MovieTypeDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/dto/service/ServiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/dto/service/ServiceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/model/Movie.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/model/MovieType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/repository/IMovieRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/repository/IMovieTypeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/IMovieService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/IMovieTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/impl/MovieService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/impl/MovieTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/service/IServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/service/IServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/service/impl/ServiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/java/com/example/movie/service/service/impl/ServiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-BE/CaseStudy/movie/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-FE" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/csd/Group3-Repository-FE" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2Ng2BV5HqD90X0ZIqnxiodOLNTH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f213862b-1232-4d4b-8cc8-3037b4c11d31" name="Changes" comment="" />
+      <created>1680071269263</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680071269263</updated>
+      <workItem from="1680071270553" duration="67000" />
+      <workItem from="1680071625605" duration="81000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

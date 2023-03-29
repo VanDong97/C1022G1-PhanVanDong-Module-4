@@ -17,7 +17,6 @@ public class BlogController {
 
     @Autowired
     private IBlogService blogService;
-//    @ResponseStatus(HttpStatus.OK)
     @GetMapping("")
     public Page<BlogDTO> getBlogs(@PageableDefault(size = 2) Pageable pageable) {
         return blogService.findAll(pageable);

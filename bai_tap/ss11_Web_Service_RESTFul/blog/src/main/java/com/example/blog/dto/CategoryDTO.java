@@ -2,7 +2,7 @@ package com.example.blog.dto;
 
 import java.util.Set;
 
-public class CategoryDTO {
+public class CategoryDTO<BlogDTO> {
     private Integer id;
 
     private String name;

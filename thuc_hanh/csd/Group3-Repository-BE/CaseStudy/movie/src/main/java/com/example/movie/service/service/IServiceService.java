@@ -15,4 +15,5 @@ public interface IServiceService {
     ServiceDTO findById(int id);
     void save(Service service);
     void delete(int id);
+    void edit(Service service);
 }
