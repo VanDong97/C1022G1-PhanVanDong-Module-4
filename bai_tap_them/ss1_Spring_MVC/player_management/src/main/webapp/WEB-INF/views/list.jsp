@@ -39,9 +39,43 @@
             <td>${playerSoccer.location}</td>
             <td><img src="${playerSoccer.img}" alt=""></td>
             <td><a href="/player/detail/${playerSoccer.id}">Thông Tin Chi Tiết</a></td>
+            <td>
+                <button type="button" class="btn btn-danger" onclick="deleteplayer(${playerSoccer.id}),'${playerSoccer.name}'"
+                        data-toggle="modal" data-targer="#exampleModal"> Xóa
+                </button></td>
         </tr>
     </c:forEach>
 </table>
+<%--Modal Xóa--%>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xóa Cầu Thủ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="/player/delete">
+                <div class="modal-body">
+                    <input hidden type="text" id="idDelete" name="idDelete">
+                    <span>Bạn Có Muốn Xóa Cầu Thủ </span><span style="color: red" class="fw-bolder"
+                                                              id="nameDelete"> Không</span> ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                    <button type="submit" class="btn btn-primary">Có</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function infoDelete(id, name) {
+        document.getElementById("idDelete").value = id;
+        document.getElementById("nameDelete").innerText = name;
+    }
+</script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
