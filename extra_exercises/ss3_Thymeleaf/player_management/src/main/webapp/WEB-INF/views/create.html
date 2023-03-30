@@ -12,16 +12,16 @@
 </head>
 <body>
 <form action="/player/create" method="post" th:object="${playerSoccer}"></form>
-<lable for="name">Tên Cầu Thủ</lable>
-<input type="text" th:field="*{name}" ,id="name">
-<lable for="dateOfBirth">Ngày Sinh</lable>
-<input type="date" th:field="*{dateOfBirth}" ,id="dateOfBirth">
-<lable for="experience">Kinh Nghiệm</lable>
-<input type="text" th:field="*{experience}" ,id="experience">
-<lable for="location">Vị Trí</lable>
-<input type="text" th:field="*{location}" ,id="location">
-<lable for="img">Hình Ảnh</lable>
-<input type="text" th:field="*{img}" ,id="img">
+<label for="name">Tên Cầu Thủ</label>
+<input type="text" th:field="*{name}" id="name">
+<label for="dateOfBirth">Ngày Sinh</label>
+<input type="date" th:field="*{dateOfBirth}" id="dateOfBirth">
+<label for="experience">Kinh Nghiệm</label>
+<input type="text" th:field="*{experience}" id="experience">
+<label for="location">Vị Trí</label>
+<input type="text" th:field="*{location}" id="location">
+<label for="img">Hình Ảnh</label>
+<input type="text" th:field="*{img}" id="img">
 <div>
     <input type="submit" class="btn btn-primary" value="Thêm Mới">
     <button type="button" class="btn btn-secondary" onclick="location.href = '/player'">Trở Về</button>
