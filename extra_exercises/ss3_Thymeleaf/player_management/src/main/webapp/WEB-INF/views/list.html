@@ -58,35 +58,35 @@
         </tbody>
     </table>
 </div>
-<!-- Modal Xóa-->
-<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title"> Xóa cầu thủ </h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    <!-- Modal Xóa-->
+    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"> Xóa cầu thủ </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/player/delete">
+                    <div class="modal-body">
+                        <input type="hidden" name="deleteId" id="deleteId">
+                        <span>Bạn Có Chắc Chắn Xóa Cầu Thủ</span><span style="color: red" id="deleteName"></span> Không ?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                        <button type="submit" class="btn btn-danger">Xoá</button>
+                    </div>
+                </form>
             </div>
-            <form action="/player/delete">
-                <div class="modal-body">
-                    <input type="hidden" name="deleteId" id="deleteId">
-                    <span>Bạn Có Chắc Chắn Xóa Cầu Thủ</span><span style="color: red" id="deleteName"></span> Không ?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
-                    <button type="submit" class="btn btn-danger">Xoá</button>
-                </div>
-            </form>
         </div>
     </div>
-</div>
-<script>
-    function infoDelete (id, name) {
-        document.getElementById("deleteId").value = id;
-        document.getElementById("deleteName").innerText = name;
-    }
-</script>
+    <script>
+        function infoDelete (id, name) {
+            document.getElementById("deleteId").value = id;
+            document.getElementById("deleteName").innerText = name;
+        }
+    </script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
