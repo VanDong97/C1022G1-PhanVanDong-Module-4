@@ -40,11 +40,20 @@ public class PlayerSoccerRepository implements IPlayerSoccerRepository {
 
     @Override
     public void createPlayer(PlayerSoccer playerSoccer) {
+        playerSoccer.setId(playerSoccerList.size() + 1);
         playerSoccerList.add(playerSoccer);
     }
 
     @Override
     public void editPlayer(PlayerSoccer playerSoccer) {
-        playerSoccerList.set(playerSoccer.getId(), playerSoccer);
+        for (PlayerSoccer pc: playerSoccerList) {
+            if (playerSoccer.getId() == pc.getId()){
+                pc.setId(playerSoccer.getId());
+                pc.setName(playerSoccer.getName());
+                pc.setDateOfBirth(playerSoccer.getDateOfBirth());
+                pc.setExperience(playerSoccer.getExperience());
+                pc.setLocation(playerSoccer.getLocation());
+            }
+        }
     }
 }

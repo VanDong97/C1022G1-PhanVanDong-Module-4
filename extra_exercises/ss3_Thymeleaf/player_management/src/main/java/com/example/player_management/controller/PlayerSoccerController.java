@@ -21,15 +21,15 @@ public class PlayerSoccerController {
         model.addAttribute("playerSoccerList",iPlayerSoccerService.findAll());
         return "/list";
     }
-    @GetMapping("/detail/{id}")
-    public String detailPlayerSoccer(@PathVariable("id") int id,Model model){
+    @GetMapping("/detail")
+    public String detailPlayerSoccer(@RequestParam int id,Model model){
         PlayerSoccer playerSoccer = iPlayerSoccerService.findById(id);
         model.addAttribute("playerSoccer",playerSoccer);
         return "/detail";
     }
-    @GetMapping("/detele")
-    public String deletePlayerSoccer(@RequestParam int id){
-        iPlayerSoccerService.deletePlayer(id);
+    @GetMapping("/delete")
+    public String deletePlayerSoccer(@RequestParam int deleteId){
+        iPlayerSoccerService.deletePlayer(deleteId);
         return "redirect:/player";
     }
     @GetMapping("/create")
@@ -39,13 +39,13 @@ public class PlayerSoccerController {
     }
 
     @PostMapping("/create")
-    public String createPLayerSoccer(@ModelAttribute PlayerSoccer playerSoccer, BindingResult bindingResult, RedirectAttributes attributes){
+    public String createPLayerSoccer(@ModelAttribute PlayerSoccer playerSoccer, RedirectAttributes attributes){
         iPlayerSoccerService.createPlayer(playerSoccer);
         attributes.addFlashAttribute("msg","Thêm Mới Thành Công");
         return "redirect:/player";
     }
-    @GetMapping("/edit/{id}")
-    public String editForm(Model model,@PathVariable int id){
+    @GetMapping("/edit")
+    public String editForm(Model model,@RequestParam int id){
         model.addAttribute("playerSoccer",this.iPlayerSoccerService.findById(id));
         return "/edit";
     }

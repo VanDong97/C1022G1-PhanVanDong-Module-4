@@ -47,13 +47,13 @@
             <td th:text="${playerSoccer.experience}"></td>
             <td th:text="${playerSoccer.location}"></td>
             <td><img th:src="${playerSoccer.img}" alt=""></td>
-            <td><a th:href="@{/player/detail?id=__${playerSoccer.id}__}">Chi Tiết Cầu Thủ</a></td>
+            <td><a th:href="@{/player/detail?id=__*{playerSoccer.id}__}">Chi Tiết Cầu Thủ</a></td>
             <td>
-                <button th:attr="onclick=|getPlayerInfo('${playerSoccer.id}', '${playerSoccer.name}')|" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modelId">
+                <button th:attr="onclick=|infoDelete('${playerSoccer.id}', '${playerSoccer.name}')|" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modelId">
                     Xóa
                 </button>
             </td>
-            <td><a th:href="@{/player/edit?id=__${playerSoccer.id}__}" class="btn btn-primary">Chỉnh Sửa</a></td>
+            <td><a th:href="@{/player/edit?id=__*{playerSoccer.id}__}" class="btn btn-primary">Chỉnh Sửa</a></td>
         </tr>
         </tbody>
     </table>
@@ -63,28 +63,28 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Xóa Cầu Thủ</h5>
+                <h5 class="modal-title"> Xóa cầu thủ </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="/player/detele">
+            <form action="/player/delete">
                 <div class="modal-body">
-                    <input name="id" id="id" class="btn btn-primary" type="hidden">
-                    <span>Bạn Có Chắc Chắn Xóa Cầu Thủ</span><span style="color: red" id="name"></span> Không ?
+                    <input type="hidden" name="deleteId" id="deleteId">
+                    <span>Bạn Có Chắc Chắn Xóa Cầu Thủ</span><span style="color: red" id="deleteName"></span> Không ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Huỷ</button>
+                    <button type="submit" class="btn btn-danger">Xoá</button>
                 </div>
             </form>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Trở Về</button>
-                <button type="submit" class="btn btn-primary">Xóa</button>
-            </div>
         </div>
     </div>
 </div>
 <script>
-    function getPlayerInfo(id,name){
-        document.getElementById("id").value = id;
-        document.getElementById("name").innerText = name;
+    function infoDelete (id, name) {
+        document.getElementById("deleteId").value = id;
+        document.getElementById("deleteName").innerText = name;
     }
 </script>
 <!-- Optional JavaScript -->
