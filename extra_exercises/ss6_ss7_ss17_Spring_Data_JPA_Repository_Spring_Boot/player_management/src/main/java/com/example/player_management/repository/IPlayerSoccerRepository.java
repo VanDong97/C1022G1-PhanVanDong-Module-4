@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface IPlayerSoccerRepository extends JpaRepository<PlayerSoccer,Integer> {
-    Page<PlayerSoccer> findPlayerSoccerByNameAnDateOfBirthContaining(String name, Pageable pageable);
+    Page<PlayerSoccer> findPlayerSoccerByNameContaining(String name, Pageable pageable);
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <title>Chi Tiết Cầu Thủ</title>
     <!-- Required meta tags -->
@@ -11,7 +11,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<h1 class="text-center" style="color: coral">Chi Tiết Cầu Thủ</h1>
+<h1 style="color: coral">Chi Tiết Cầu Thủ</h1>
 <table th:object="${playerSoccer}">
     <tr>
         <div class="form-group">
@@ -50,9 +50,13 @@
 
     <tr>
         <div class="form-group">
-            <th>Ảnh: </th>
+            <th>Ảnh đại diện: </th>
             <td><img th:src="${playerSoccer.img}" ></td>
         </div>
+    </tr>
+    <tr>
+        <th></th>
+        <td><a href="/player" class="btn btn-secondary">Trang chủ</a></td>
     </tr>
 </table>
 <!-- Optional JavaScript -->

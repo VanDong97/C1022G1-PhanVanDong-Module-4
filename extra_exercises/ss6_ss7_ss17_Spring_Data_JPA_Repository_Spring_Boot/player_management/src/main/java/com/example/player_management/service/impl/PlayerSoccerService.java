@@ -18,7 +18,7 @@ public class PlayerSoccerService implements IPlayerSoccerService {
 
     @Override
     public Page<PlayerSoccer> findAll(String name, Pageable pageable) {
-        return iPlayerSoccerRepository.findPlayerSoccerByNameAnDateOfBirthContaining(name,pageable);
+        return iPlayerSoccerRepository.findPlayerSoccerByNameContaining(name,pageable);
     }
 
     @Override

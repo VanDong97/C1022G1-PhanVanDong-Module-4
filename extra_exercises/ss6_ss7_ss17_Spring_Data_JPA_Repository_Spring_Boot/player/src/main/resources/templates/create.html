@@ -17,13 +17,17 @@
     <label for="name">Điền tên cầu thủ</label>
     <input type="text" class="form-control" th:field="*{name}" id="name">
     <label for="dateOfBirth">Điền ngày sinh</label>
-    <input type="text" class="form-control" th:field="*{dateOfBirth}" id="dateOfBirth">
+    <input type="date" class="form-control" th:field="*{dateOfBirth}" id="dateOfBirth">
     <label for="experience">Điền kinh nghiệm</label>
     <input type="text" class="form-control" th:field="*{experience}" id="experience">
     <label for="location">Điền vị trí </label>
     <input type="text" class="form-control" th:field="*{location}" id="location">
     <label for="img">Ảnh cầu thủ</label>
     <input type="text" class="form-control" th:field="*{img}" id="img">
+    <label>Đội Tuyển</label>
+    <select th:field="*{team}">
+        <option th:each="team : ${teamList}" th:text="${team.name}" th:value="${team.id}"></option>
+    </select>
     <div class="mt-3">
         <input type="submit" class="btn btn-primary" value="Tạo mới">
         <button type="button" class="btn btn-secondary" onclick="window.location.href='/player'">Hủy Bỏ</button>

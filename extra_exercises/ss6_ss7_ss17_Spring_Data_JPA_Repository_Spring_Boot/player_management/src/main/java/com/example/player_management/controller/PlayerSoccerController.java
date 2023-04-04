@@ -37,7 +37,7 @@ public class PlayerSoccerController {
         }
         Pageable sortedPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
         Page<PlayerSoccer> playerSoccerPage = iPlayerSoccerService.findAll(name, sortedPageable);
-        model.addAttribute("soccerPlayerList", playerSoccerPage);
+        model.addAttribute("playerSoccerList", playerSoccerPage);
         model.addAttribute("name", name);
         List<Integer> pageNumberList = new ArrayList<>();
         for (int i = 1; i <= playerSoccerPage.getTotalPages(); i++) {

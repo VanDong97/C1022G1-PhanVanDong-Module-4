@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Thêm Mới Cầu Thủ</title>
+    <title>Chỉnh Sửa Cầu Thủ</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,23 +11,26 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<form action="/player/create" method="post" th:object="${playerSoccer}">
-    <label for="id">Điền mã cầu thủ</label>
-    <input type="text" class="form-control" th:field="*{id}" id="id">
-    <label for="name">Điền tên cầu thủ</label>
-    <input type="text" class="form-control" th:field="*{name}" id="name">
-    <label for="dateOfBirth">Điền ngày sinh</label>
-    <input type="text" class="form-control" th:field="*{dateOfBirth}" id="dateOfBirth">
-    <label for="experience">Điền kinh nghiệm</label>
-    <input type="text" class="form-control" th:field="*{experience}" id="experience">
-    <label for="location">Điền vị trí </label>
-    <input type="text" class="form-control" th:field="*{location}" id="location">
-    <label for="img">Ảnh cầu thủ</label>
-    <input type="text" class="form-control" th:field="*{img}" id="img">
-    <div class="mt-3">
-        <input type="submit" class="btn btn-primary" value="Tạo mới">
-        <button type="button" class="btn btn-secondary" onclick="window.location.href='/player'">Hủy Bỏ</button>
-    </div>
+<form action="/player/edit" method="post" th:object="${playerSoccer}">
+  <input type="hidden" th:field="${playerSoccer.id}">
+  <label for="name">Tên Cầu Thủ :</label>
+  <input type="text" class="form-control" th:field="*{name}" id="name">
+  <label for="dateOfBirth">Ngày Sinh :</label>
+  <input type="date" class="form-control" th:field="*{dateOfBirth}" id="dateOfBirth">
+  <label for="experience">Kinh Nghiệm :</label>
+  <input type="text" class="form-control" th:field="*{experience}"id="experience">
+  <label for="location">Vị Trí :</label>
+  <input type="text" class="form-control" th:field="*{location}" id="location">
+  <label for="img">Vị Trí :</label>
+  <input type="text" class="form-control" th:field="*{img}" id="img">
+    <label>Đội Tuyển</label>
+    <select th:field="*{team}">
+        <option th:each="team : ${team}" th:text="${team.name}" th:value="${team.id}"></option>
+    </select>
+  <div class="mt-3">
+    <input type="submit" class="btn btn-primary" value="Xác Nhận">
+    <button type="button" class="btn btn-secondary" onclick="window.location.href='/player'">Hủy Bỏ</button>
+  </div>
 </form>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
