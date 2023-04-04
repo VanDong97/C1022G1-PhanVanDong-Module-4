@@ -8,10 +8,12 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,25 +22,30 @@ import java.util.List;
 public class PlayerSoccerController {
 
     @Autowired
-    private IPlayerSoccerService  iPlayerSoccerService;
+    private IPlayerSoccerService iPlayerSoccerService;
 
     @GetMapping("")
     public String showSoccerPlayerList(@PageableDefault(size = 2) Pageable pageable
-            , @RequestParam(required = false) String name , Model model) {
+            , @RequestParam(defaultValue = "") String name,
+                                       @RequestParam(defaultValue = "") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) Pageable startDate,
+                                       @RequestParam(defaultValue = "") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate,
+                                       Model model) {
         if (name == null) {
             name = "";
         }
 
         Sort sort = null;
-        if (name == name){
+        if (name == name) {
             sort = Sort.by("dateOfBirth").ascending();
-        }else {
+        } else {
             sort = Sort.by("name").ascending();
         }
-        Pageable sortedPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
-        Page<PlayerSoccer> playerSoccerPage = iPlayerSoccerService.findAll(name, sortedPageable);
-        model.addAttribute("playerSoccerList", playerSoccerPage);
         model.addAttribute("name", name);
+        model.addAttribute("startDate", startDate);
+        model.addAttribute("endDate", endDate);
+        Pageable sortedPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
+        Page<PlayerSoccer> playerSoccerPage = iPlayerSoccerService.findAll(name, startDate, endDate, sortedPageable);
+        model.addAttribute("playerSoccerList", playerSoccerPage);
         List<Integer> pageNumberList = new ArrayList<>();
         for (int i = 1; i <= playerSoccerPage.getTotalPages(); i++) {
             pageNumberList.add(i);

@@ -12,11 +12,13 @@
 </head>
 <body>
 <h1 class="text-center" style="color: red">Danh Sách Cầu Thủ</h1>
-<form action="/soccer-player" method="get">
-    <div class="d-flex">
-        <input class="form-control me-2" type="search" name="name" placeholder="Tìm Kiếm" th:value="${name}">
+<form action="/player" method="get">
+    <div class="d-flex" style="margin-top: 20px; margin-right: 10px">
+        <input class="form-control me-2" type="search" id="name" name="name" placeholder="tìm kiếm" th:value="${name}">
+        <input class="form-control me-2" type="date" id="startDate" name="startDate" placeholder="tìm kiếm" th:value="${startDate}">
+        <input class="form-control me-2" type="date" id="endDate" name="endDate" placeholder="tìm kiếm" th:value="${endDate}">
         <input type="submit" class="btn btn-outline-warning"
-               style="width: 100px" value="Tìm kiếm">
+               style="width: 120px" value="Tìm kiếm">
     </div>
 </form>
 <a class="btn btn-add btn-sm" href="/player/create">
