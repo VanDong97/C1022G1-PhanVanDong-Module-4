@@ -1,5 +1,6 @@
 package com.example.player.controller;
 
+import com.example.player.dto.PLayerSoccerDTO;
 import com.example.player.model.PlayerSoccer;
 import com.example.player.service.IPLayerSoccerService;
 import com.example.player.service.ITeamService;
@@ -8,7 +9,11 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/player")
@@ -43,27 +48,37 @@ public class PlayerSoccerController {
 
     @GetMapping("/create")
     public String showFormCreatePlayer(Model model) {
-        model.addAttribute("playerSoccer", new PlayerSoccer());
+        model.addAttribute("pLayerSoccerDTO", new PLayerSoccerDTO());
         model.addAttribute("teamList", iTeamService.findAll());
-        return "/create";
+        return "create";
     }
 
     @PostMapping("/create")
-    public String createPlayer(@ModelAttribute PlayerSoccer playerSoccer) {
-        ipLayerSoccerService.createPlayer(playerSoccer);
-        return "redirect:/player";
+    public String createPlayer(@Valid @ModelAttribute("pLayerSoccerDTO") PLayerSoccerDTO pLayerSoccerDTO,
+                               BindingResult bindingResult) {
+        if (bindingResult.hasErrors()){
+            return "create";
+        }else {
+            ipLayerSoccerService.createPlayer(pLayerSoccerDTO);
+            return "redirect:/player";
+        }
     }
 
     @GetMapping("/edit")
     public String showFormEditPlayer(@RequestParam int id, Model model) {
-        model.addAttribute("playerSoccer", ipLayerSoccerService.findById(id));
+        model.addAttribute("pLayerSoccerDTO", ipLayerSoccerService.findById(id));
         model.addAttribute("team", iTeamService.findAll());
-        return "/edit";
+        return "edit";
     }
 
     @PostMapping("/edit")
-    public String editPlayer(@ModelAttribute PlayerSoccer playerSoccer) {
-        ipLayerSoccerService.editPlayer(playerSoccer);
-        return "redirect:/player";
+    public String editPlayer(@Valid @ModelAttribute("pLayerSoccerDTO") PLayerSoccerDTO pLayerSoccerDTO,
+                             BindingResult bindingResult) {
+        if (bindingResult.hasErrors()){
+            return "edit";
+        }else {
+            ipLayerSoccerService.editPlayer(pLayerSoccerDTO);
+            return "redirect:/player";
+        }
     }
 }

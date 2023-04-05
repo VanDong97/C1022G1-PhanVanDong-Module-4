@@ -34,7 +34,7 @@
         <th>Mã cầu thủ</th>
         <th>Tên Cầu Thủ</th>
         <th>Ngày sinh</th>
-        <th>Kinh nghiệm</th>
+        <th>Kinh nghiệm (Năm)</th>
         <th>Vị trí</th>
         <th>Ảnh</th>
         <th>Đội Tuyển</th>
@@ -49,7 +49,7 @@
         <td th:text="*{playerSoccer.experience}"></td>
         <td th:text="*{playerSoccer.location}"></td>
         <td><img th:src="*{playerSoccer.img}">
-        <td th:text="*{playerSoccer.team.name}"></td>
+        <td th:text="*{playerSoccer.team?.name}"></td>
         <td><a th:href="@{/player/detail?id=__*{playerSoccer.id}__}" class="btn btn-primary btn-sm">Thông tin chi
             tiết</a></td>
         <td><a th:href="@{/player/edit?id=__*{playerSoccer.id}__}" class="btn btn-primary btn-sm">Sửa</a></td>

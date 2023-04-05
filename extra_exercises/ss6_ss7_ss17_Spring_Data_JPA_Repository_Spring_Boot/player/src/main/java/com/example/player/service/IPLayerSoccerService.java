@@ -1,5 +1,6 @@
 package com.example.player.service;
 
+import com.example.player.dto.PLayerSoccerDTO;
 import com.example.player.model.PlayerSoccer;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,7 +15,7 @@ public interface IPLayerSoccerService {
 
     void deletePlayer(PlayerSoccer playerSoccer);
 
-    void createPlayer(PlayerSoccer playerSoccer);
+    void createPlayer(PLayerSoccerDTO pLayerSoccerDTO);
 
-    void editPlayer(PlayerSoccer playerSoccer);
+    void editPlayer(PLayerSoccerDTO pLayerSoccerDTO);
 }

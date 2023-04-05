@@ -1,8 +1,10 @@
 package com.example.player.service.impl;
 
+import com.example.player.dto.PLayerSoccerDTO;
 import com.example.player.model.PlayerSoccer;
 import com.example.player.repository.IPlayerSoccerRepository;
 import com.example.player.service.IPLayerSoccerService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -32,12 +34,16 @@ public class PLayerSoccerService implements IPLayerSoccerService {
     }
 
     @Override
-    public void createPlayer(PlayerSoccer playerSoccer) {
+    public void createPlayer(PLayerSoccerDTO pLayerSoccerDTO) {
+        PlayerSoccer playerSoccer = new PlayerSoccer();
+        BeanUtils.copyProperties(pLayerSoccerDTO, playerSoccer);
         iPlayerSoccerRepository.save(playerSoccer);
     }
 
     @Override
-    public void editPlayer(PlayerSoccer playerSoccer) {
+    public void editPlayer(PLayerSoccerDTO pLayerSoccerDTO) {
+        PlayerSoccer playerSoccer = new PlayerSoccer();
+        BeanUtils.copyProperties(pLayerSoccerDTO,playerSoccer);
         iPlayerSoccerRepository.save(playerSoccer);
     }
 }

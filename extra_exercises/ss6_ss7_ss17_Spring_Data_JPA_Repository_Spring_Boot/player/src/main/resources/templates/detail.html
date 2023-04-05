@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Chi Tiết Cầu Thủ</title>
     <!-- Required meta tags -->
@@ -47,7 +47,12 @@
             <td th:text="${playerSoccer.location}"></td>
         </div>
     </tr>
-
+    <tr>
+        <div class="form-group">
+            <th>Đội Tuyển :</th>
+            <td th:text="${playerSoccer.team?.name}"></td>
+        </div>
+    </tr>
     <tr>
         <div class="form-group">
             <th>Ảnh đại diện: </th>

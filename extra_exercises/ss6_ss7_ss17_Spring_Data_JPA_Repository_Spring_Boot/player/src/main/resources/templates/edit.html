@@ -11,18 +11,23 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<form action="/player/edit" method="post" th:object="${playerSoccer}">
-  <input type="hidden" th:field="${playerSoccer.id}">
+<form action="/player/edit" method="post" th:object="${pLayerSoccerDTO}" style="width: 300px">
+  <input type="hidden" th:field="${pLayerSoccerDTO.id}">
   <label for="name">Tên Cầu Thủ :</label>
-  <input type="text" class="form-control" th:field="*{name}" id="name">
+  <input type="text" class="form-control" th:field="${pLayerSoccerDTO.name}" id="name">
+    <span style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
   <label for="dateOfBirth">Ngày Sinh :</label>
-  <input type="date" class="form-control" th:field="*{dateOfBirth}" id="dateOfBirth">
-  <label for="experience">Kinh Nghiệm :</label>
-  <input type="text" class="form-control" th:field="*{experience}"id="experience">
+  <input type="date" class="form-control" th:field="${pLayerSoccerDTO.dateOfBirth}" id="dateOfBirth">
+    <span style="color: red" th:if="${#fields.hasErrors('dateOfBirth')}" th:errors="*{dateOfBirth}"></span>
+    <label for="experience">Kinh Nghiệm :</label>
+  <input type="text" class="form-control" th:field="${pLayerSoccerDTO.experience}"id="experience">
+    <span style="color: red" th:if="${#fields.hasErrors('experience')}" th:errors="*{experience}"></span>
   <label for="location">Vị Trí :</label>
-  <input type="text" class="form-control" th:field="*{location}" id="location">
-  <label for="img">Vị Trí :</label>
-  <input type="text" class="form-control" th:field="*{img}" id="img">
+  <input type="text" class="form-control" th:field="${pLayerSoccerDTO.location}" id="location">
+    <span style="color: red" th:if="${#fields.hasErrors('location')}" th:errors="*{location}"></span>
+  <label for="img">Ảnh cầu thủ :</label>
+  <input type="text" class="form-control" th:field="${pLayerSoccerDTO.img}" id="img">
+  <span style="color: red" th:if="${#fields.hasErrors('img')}" th:errors="*{img}"></span>
     <label>Đội Tuyển</label>
     <select th:field="*{team}">
         <option th:each="team : ${team}" th:text="${team.name}" th:value="${team.id}"></option>
