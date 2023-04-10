@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -34,5 +35,10 @@ public class PlayerSoccerService implements IPlayerSoccerService {
     @Override
     public void deletePlayer(PlayerSoccer playerSoccer) {
         iPlayerSoccerRepository.delete(playerSoccer);
+    }
+
+    @Override
+    public List<PlayerSoccer> footballTeam() {
+        return iPlayerSoccerRepository.findAll();
     }
 }
