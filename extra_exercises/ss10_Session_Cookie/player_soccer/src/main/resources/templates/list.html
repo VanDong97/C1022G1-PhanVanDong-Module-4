@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh Sách Cầu Thủ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1 class="text-center" style="color: coral">Danh Sách Các Cầu Thủ</h1>
+<form action="/player" method="get" style="width: 400px">
+    <div class="d-flex">
+        <input class="form-control me-2" type="search" id="name" name="name" placeholder="Tìm Kiếm"
+               th:value="${name}">
+        <input type="submit" class="btn btn-outline-warning"
+               style="width: 100px" value="Tìm kiếm">
+    </div>
+</form>
+<div class="d-flex justify-content-around">
+    <div class="card d-flex flex-column" th:each="playerSoccer ,iterStat : ${playerSoccerList}" style="width: 18rem;">
+        <img th:src="*{playerSoccer.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" th:text="*{playerSoccer.name}"></h5>
+            <p class="card-text">Giữ châm ngôn sống của bạn ngắn gọn và dễ nhớ. Nó thậm chí có thể là một từ: Từ bi.
+                Điềm tĩnh. Lắng nghe.</p>
+            <a th:href="@{/player/detail?id=__*{playerSoccer.id}__}" class="btn btn-primary m-auto">Chi tiết cầu thủ</a>
+        </div>
+    </div>
+</div>
+<span>
+    <a th:if="${playerSoccerList.hasPrevious()}"
+       th:href="@{/player(page = ${playerSoccerList.number - 1})}">Trang Trước</a>
+</span>
+<span th:text="${playerSoccerList.number + '/' + (playerSoccerList.getTotalPages() - 1)}"></span>
+<span>
+    <a th:if="${playerSoccerList.hasNext()}" th:href="@{/player(page = ${playerSoccerList.number + 1})}">Trang Sau</a>
+</span>
+<form action="/player" method="get" id="pageForm">
+    <input type="number" name="page" onchange="document.getElementById('pageForm').submit();">
+</form>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
