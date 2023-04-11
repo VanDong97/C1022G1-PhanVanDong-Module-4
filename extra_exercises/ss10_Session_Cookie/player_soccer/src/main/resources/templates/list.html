@@ -20,6 +20,8 @@
                style="width: 100px" value="Tìm kiếm">
     </div>
 </form>
+<a th:href="@{/talk}" class="btn btn-primary m-auto">Danh Sách Yêu Thích</a>
+
 <div class="d-flex justify-content-around">
     <div class="card d-flex flex-column" th:each="playerSoccer ,iterStat : ${playerSoccerList}" style="width: 18rem;">
         <img th:src="*{playerSoccer.img}" class="card-img-top" alt="...">
