@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Danh Sách Cầu Thủ</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        img{
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<main class="app-content">
+    <div class="row mx-0">
+        <div class="col-md-12">
+            <div class="tile">
+                <div class="tile-body">
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button style="float: right;padding-top: 10px" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                            Thêm Mới Cầu Thủ
+                        </button>
+                    </div>
+                    <table class="table table-hover table-striped table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Mã Cầu Thủ</th>
+                            <th>Tên Cầu Thủ</th>
+                            <th>Ngày Sinh</th>
+                            <th>Kinh Nghiệm (Năm)</th>
+                            <th>Vị Trí</th>
+                            <th>Ảnh</th>
+                            <th>Đội Tuyển</th>
+                        </tr>
+                        </thead>
+                        <tbody id="playerSoccer"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!--MODAL CREATE-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm Mới Cầu Thủ</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" >
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">Tên Cầu Thủ</label>
+                        <input type="text"
+                               class="form-control" name="name" id="name" placeholder="">
+                        <span class="form-message text-danger" id="addNameValid"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="dateOfBirth">Ngày Sinh</label>
+                        <input type="date"
+                               class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="">
+                        <span class="form-message text-danger" id="addDateOfBirthValid"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Kinh Nghiệm</label>
+                        <input type="text"
+                               class="form-control" name="experience" id="experience" placeholder="">
+                        <span class="form-message text-danger" id="addExperienceValid"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">VỊ Trí</label>
+                        <input type="text"
+                               class="form-control" name="location" id="location" placeholder="">
+                        <span class="form-message text-danger" id="addLocationValid"></span>
+                    </div>
+                    <div>
+                        <label>Đội Tuyển</label>
+                        <div id="team" class="form-group"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="img">Hình ảnh</label>
+                        <input type="text"
+                               class="form-control" name="img" id="img" placeholder="">
+                        <span class="form-message text-danger" id="addImgValid"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="loadDelete">Hủy</button>
+                    <button type="submit" id="addPlayer" class="btn btn-primary">Thêm mới</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+<script src="playerSoccerList.js"></script>
+<script src="createPlayer.js"></script>
+</body>
+</html>
